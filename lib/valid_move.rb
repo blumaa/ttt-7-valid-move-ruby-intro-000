@@ -4,22 +4,22 @@ def valid_move?(board, index)
     true
   elsif position_taken? != false
     false
-  elsif board[0].between?(0,8)
+  elsif board[index].between?(0,8)
     true
   end
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, index)
-  if board[0] == " "
+  if board[index] == " "
     false
-  elsif board[0] == ""
+  elsif board[index] == ""
     false
-  elsif board[0] == "X"
+  elsif board[index] == "X"
     true
-  elsif board[0] == "O"
+  elsif board[index] == "O"
     true
-  elsif board[0] == nil
+  elsif board[index] == nil
     false
   else
   end
